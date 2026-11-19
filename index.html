@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="index.css">
+    
+</head>
+<body>
+
+    <div class="container">
+
+     <div class="card">
+
+        <div class="icon"></div>
+
+         <h2>Login</h2>
+         <p>Enter your details to login.</p>
+
+    <form>
+
+     <label>Email</label>
+     <input type="email" placeholder="Enter your Email" required>
+
+    <div class="password">
+     <label>Password</label>
+     <a href="#">Forgot password?</a>
+    </div>
+
+     <input type="password" placeholder="Enter your password" required>
+
+      <button type="submit">Log In</button>
+      <p id="error"></p>
+
+     </form>
+
+        <div class="or">
+         <span>OR</span>
+        </div>
+
+        <button class="google">
+         <strong>G</strong> Continue with Google
+        </button>
+
+            
+        <button class="apple">
+         <strong></strong> Continue with Apple
+        </button>
+
+        <div class="signup">
+        Don't have an account yet? <a href="signup.html">Sign up</a>
+        </div>
+
+        </div>
+
+    </div>
+
+    <script src="login.js">
+const emailInput = document.getElementById("email");
+const passwordInput = document.getElementById("password");
+const loginButton = document.getElementById("loginButton");
+const errorMessage = document.getElementById("error");
+
+emailInput.addEventListener("input", function () {
+
+    if (emailInput.value === "william@example.com") {
+        errorMessage.textContent = "";
+    } else if (emailInput.value !== "") {
+        errorMessage.textContent = "No account found with this email. Please sign up.";
+    } else {
+        errorMessage.textContent = "";
+    }
+
+    checkInputs();
+});
+
+passwordInput.addEventListener("input", function () {
+    checkInputs();
+});
+
+function checkInputs() {
+
+    if (emailInput.value === "william@example.com" && passwordInput.value !== "") {
+        loginButton.disabled = false;
+    } else {
+        loginButton.disabled = true;
+    }
+}
+
+loginButton.addEventListener("click", function () {
+
+    if (emailInput.value === "william@example.com" && passwordInput.value === "123abc56") {
+        alert("Login successful!");
+    } else {
+        alert("Incorrect password!");
+    }
+
+});
+
+
+    </script>
+
+</body>
+</html>

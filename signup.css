@@ -1,0 +1,98 @@
+/* Signup styling*/
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.card {
+    background-color: white;
+    width: 350px;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+h2 {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+form button {
+    background-color: #222;
+    color: white;
+}
+
+.or {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: gray;
+    margin: 20px 0;
+}
+
+.or::before,
+.or::after {
+    content: "";
+    height: 1px;
+    background-color: #ddd;
+    flex: 1;
+}
+
+.google,
+.apple {
+    background-color: white;
+}
+
+.signup {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    margin-top: 15px;
+    box-sizing: border-box;
+}
+
+.signup:hover {
+    background-color: #f4f4f4;
+}
+
+#error {
+    color: red;
+    font-size: 13px;
+    text-align: left;
+}
